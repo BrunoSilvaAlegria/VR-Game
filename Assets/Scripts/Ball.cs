@@ -8,5 +8,7 @@ public class Ball : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         Instantiate(soundPulsePrefab, transform.position, Quaternion.identity);
+
+        SoundSystem.Emit(transform.position, 1f); // Emite um som com intensidade 1 na posição da colisão
     }
 }

@@ -21,7 +21,7 @@ public class PlayerWallBlock : MonoBehaviour
     void Update()
     {
         // Set the Character Controller's center to the local position of the head transform on X and Z.
-        m_CharacterController.center = new Vector3(m_LocalHeadTransform.localPosition.x, m_CharacterController.center.y, m_LocalHeadTransform.localPosition.z);
+        m_CharacterController.center = new Vector3(m_LocalHeadTransform.localPosition.x, m_CharacterController.center.y - 0.25f, m_LocalHeadTransform.localPosition.z);
 
         // This line is important, otherwise the physics on the Character Controller won't update per frame.
         m_CharacterController.SimpleMove(Vector3.zero);

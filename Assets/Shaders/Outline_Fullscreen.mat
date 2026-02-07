@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Outline_Fullscreen
-  m_Shader: {fileID: -6465566751694194690, guid: 28c4eb2167e63fc4c8d628b3ba6fe595, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 9eefe71dfc593674fbd5132e7b5a7e2f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -37,7 +37,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Intensity: 1
-    m_Colors: []
+    - _Color_Threshold: 0.24
+    - _Normal_Threshold: 0.5
+    - _OVERLAY: 0
+    - _Outline_Opacity: 1
+    m_Colors:
+    - _Outline_Color: {r: 0.12629044, g: 0.25595403, b: 0.8113207, a: 0.74509805}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3115960894226827120
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 10
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -7,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaveAppearance
-  m_Shader: {fileID: -6465566751694194690, guid: 039f1d15830650d43aca287b83861ecb, type: 3}
+  m_Name: Shockwave_Ripple
+  m_Shader: {fileID: -6465566751694194690, guid: fbc80ac5d72a2604ab4dea292b4d12a7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,10 +37,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _SoundWaveTex:
-        m_Texture: {fileID: 2800000, guid: 4548d8bef8d28b74ab1c454ca85b31fc, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -42,26 +51,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Magnitude: -0.1
+    - _Amplitude: 0.04
+    - _Edge_Blend: 0.609
+    - _Effect_Radius: 1.38
+    - _Frequency: 1
+    - _Gradient_Edge: 1.09
+    - _Opacity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Size: 0.1
-    - _SizeRatio: 2
-    - _Speed: 2
+    - _Ripple_Density: 5.01
     m_Colors:
-    - _FocalPoint: {r: 0, g: -0.25, b: 0, a: 0}
+    - _Gradient_Color: {r: 0.3858134, g: 0.8422227, b: 1.603774, a: 0.6431373}
+    - _Ripple_Origin: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &1058937377416952887
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
-  version: 10

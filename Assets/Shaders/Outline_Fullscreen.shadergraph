@@ -2136,8 +2136,8 @@
     "m_ObjectId": "28ae835829e3419485bcf0f4e8fee7c6",
     "m_Title": "Detect Edges with WS Normals",
     "m_Position": {
-        "x": -3968.000244140625,
-        "y": -446.0000305175781
+        "x": -3968.0,
+        "y": -446.0
     }
 }
 
@@ -3104,8 +3104,8 @@
     "m_ObjectId": "525a5998dd234e6590d32cfb84bc6cb2",
     "m_Title": "Detect Edges with WS Normals",
     "m_Position": {
-        "x": -3935.000244140625,
-        "y": 938.0000610351563
+        "x": -3935.0,
+        "y": 938.0
     }
 }
 

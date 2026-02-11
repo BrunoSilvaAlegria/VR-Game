@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Outline_Fullscreen
-  m_Shader: {fileID: -6465566751694194690, guid: 9eefe71dfc593674fbd5132e7b5a7e2f, type: 3}
+  m_Name: Outline_Fullscreen_v2
+  m_Shader: {fileID: -6465566751694194690, guid: c7e0f70c1599b5b42bfe3faa28e20445, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -37,28 +37,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Color_Threshold: 2
+    - _Color_Threshold: 0.62
+    - _Depth_Threshold: 1
     - _Edge_Fade: 0.5
-    - _Fullscreen_AlphaBlendOperation: 0
-    - _Fullscreen_BlendMode: 1
-    - _Fullscreen_ColorBlendOperation: 0
-    - _Fullscreen_DepthTest: 8
-    - _Fullscreen_DepthWrite: 1
-    - _Fullscreen_DstAlphaBlend: 10
-    - _Fullscreen_DstColorBlend: 10
-    - _Fullscreen_SrcAlphaBlend: 1
-    - _Fullscreen_SrcColorBlend: 5
-    - _Gradient_Scale: 20.94
-    - _Gradient_Speed: 0.01
-    - _Gradient_Strength: 1
-    - _Normal_Threshold: 1.64
-    - _OVERLAY: 0
-    - _Outline_Opacity: 1
-    - _QueueControl: -1
-    - _QueueOffset: 0
+    - _Normal_Threshold: 1.34
     - _Sphere_Radius: 5
     m_Colors:
-    - _Outline_Color: {r: 0.12629041, g: 0.255954, b: 0.8113207, a: 1}
-    - _Sphere_Center: {r: -4.726841, g: 3.80602, b: -61.640152, a: 0}
+    - _Outline_Color: {r: 0.12629047, g: 0.25595406, b: 0.8113207, a: 0.7607843}
+    - _Sphere_Center: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

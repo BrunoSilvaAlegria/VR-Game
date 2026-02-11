@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ae81f10c5b18b46b8d3fc01eeba97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundPulse
-  maxRadius: 10
+  maxRadius: 5
   speed: 6
   visual: {fileID: 1420472148928263870}
   ringRenderer: {fileID: 2846652306056888272}

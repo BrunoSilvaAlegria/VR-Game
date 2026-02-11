@@ -41,7 +41,7 @@ Material:
     - _OutlineAmount: 0.011
     m_Colors:
     - _BaseColor: {r: 0.8113208, g: 0.18752226, b: 0.18752226, a: 1}
-    - _DiffuseColor: {r: 0.122641504, g: 0.11512104, b: 0.11512104, a: 1}
+    - _DiffuseColor: {r: 0.12799996, g: 0.11974191, b: 0.11974191, a: 1}
     - _OutlineColor: {r: 0.16470587, g: 0.19831017, b: 0.77254903, a: 1}
     - _ShadowColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

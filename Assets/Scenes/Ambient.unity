@@ -17563,7 +17563,6 @@ GameObject:
   - component: {fileID: 495419263}
   - component: {fileID: 495419262}
   - component: {fileID: 495419261}
-  - component: {fileID: 495419260}
   m_Layer: 0
   m_Name: Surgery_floor
   m_TagString: Untagged
@@ -17586,38 +17585,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533984059}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &495419260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495419258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.06666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: bd0bfcb94b36d5d49b8fc1da217841e1, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &495419261
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29566,6 +29533,7 @@ GameObject:
   - component: {fileID: 794589132}
   - component: {fileID: 794589131}
   - component: {fileID: 794589133}
+  - component: {fileID: 794589134}
   m_Layer: 0
   m_Name: Bed (3)
   m_TagString: Untagged
@@ -29670,6 +29638,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8912135, y: 0.8626015, z: 2.0893817}
   m_Center: {x: -0.00024752956, y: 0.43094373, z: 0.00040479633}
+--- !u!208 &794589134
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794589128}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.446, y: 0.43100002, z: 1.0450001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.43100002, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &795731853
 GameObject:
   m_ObjectHideFlags: 0
@@ -50220,6 +50204,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2289958586570512933, guid: c47ffa19cb019414ea56f662740ed72c, type: 3}
+      propertyPath: MinDistance
+      value: 0.5730181
+      objectReference: {fileID: 0}
     - target: {fileID: 5468468983952932796, guid: c47ffa19cb019414ea56f662740ed72c, type: 3}
       propertyPath: m_Name
       value: Ball
@@ -50234,7 +50222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9115228349252207856, guid: c47ffa19cb019414ea56f662740ed72c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.825
+      value: 4.903
       objectReference: {fileID: 0}
     - target: {fileID: 9115228349252207856, guid: c47ffa19cb019414ea56f662740ed72c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -50275,6 +50263,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5468468983952932796, guid: c47ffa19cb019414ea56f662740ed72c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1976463201}
+    - targetCorrespondingSourceObject: {fileID: 5468468983952932796, guid: c47ffa19cb019414ea56f662740ed72c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1976463202}
   m_SourcePrefab: {fileID: 100100000, guid: c47ffa19cb019414ea56f662740ed72c, type: 3}
 --- !u!1 &1372170774
 GameObject:
@@ -58808,6 +58799,7 @@ GameObject:
   - component: {fileID: 1585113631}
   - component: {fileID: 1585113630}
   - component: {fileID: 1585113632}
+  - component: {fileID: 1585113633}
   m_Layer: 0
   m_Name: Bed (4)
   m_TagString: Untagged
@@ -58912,6 +58904,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.89121324, y: 0.862601, z: 2.0893815}
   m_Center: {x: -0.0002494157, y: 0.4309465, z: 0.00041246423}
+--- !u!208 &1585113633
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585113627}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.446, y: 0.43100002, z: 1.0450001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.43100002, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1589091596
 GameObject:
   m_ObjectHideFlags: 0
@@ -64864,6 +64872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1736605941}
+  - component: {fileID: 1736605942}
   m_Layer: 0
   m_Name: Game_Rooms
   m_TagString: Untagged
@@ -64887,7 +64896,6 @@ Transform:
   - {fileID: 1618363908}
   - {fileID: 1807931551}
   - {fileID: 1273146490}
-  - {fileID: 501492308}
   - {fileID: 1086603626}
   - {fileID: 2039298456}
   - {fileID: 315136713}
@@ -64899,6 +64907,7 @@ Transform:
   - {fileID: 1637337558}
   - {fileID: 1913229895}
   - {fileID: 1658348449}
+  - {fileID: 501492308}
   - {fileID: 1161202452}
   - {fileID: 1241824748}
   - {fileID: 489257505}
@@ -64914,6 +64923,38 @@ Transform:
   - {fileID: 533984059}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1736605942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736605940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 1
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.06666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 5e93aca2aaf47be4b911a97d7673ff71, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!114 &1736684726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75431,6 +75472,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
   soundPulsePrefab: {fileID: 8159348094529003675, guid: e0f0e9187a3a4414088e57c2519fe831, type: 3}
+--- !u!114 &1976463202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976463200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifier
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 0
+  m_OverrideGenerateLinks: 1
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: 00000000
 --- !u!1 &1977571718
 GameObject:
   m_ObjectHideFlags: 0
@@ -76856,6 +76917,7 @@ GameObject:
   - component: {fileID: 2021126341}
   - component: {fileID: 2021126340}
   - component: {fileID: 2021126342}
+  - component: {fileID: 2021126343}
   m_Layer: 0
   m_Name: Bed (2)
   m_TagString: Untagged
@@ -76960,6 +77022,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8912133, y: 0.862601, z: 2.0893815}
   m_Center: {x: -0.00024464732, y: 0.4309465, z: 0.00041246423}
+--- !u!208 &2021126343
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021126337}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.446, y: 0.43100002, z: 1.0450001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.43100002, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &2022462009
 GameObject:
   m_ObjectHideFlags: 0

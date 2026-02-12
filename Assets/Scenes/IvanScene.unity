@@ -183,6 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RevealableObject
   revealTime: 1
+  outlineOn: 0.25
+  outlineOff: 0
 --- !u!65 &211886357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -229,7 +231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3f821dac15a91164a84c1ecc6f21517d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -467,6 +469,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RevealableObject
   revealTime: 1
+  outlineOn: 0.25
+  outlineOff: 0
 --- !u!65 &569602885
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -513,7 +517,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3f821dac15a91164a84c1ecc6f21517d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -593,7 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9192e5ef694e94419cbb25a76f42d57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
-  soundPulsePrefab: {fileID: 7592442403991229823, guid: 6b1f7c4538aca8d4683836c7500fd784, type: 3}
+  soundPulsePrefab: {fileID: 8159348094529003675, guid: e0f0e9187a3a4414088e57c2519fe831, type: 3}
 --- !u!54 &821862525
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -747,6 +751,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RevealableObject
   revealTime: 1
+  outlineOn: 0.25
+  outlineOff: 0
 --- !u!65 &863617926
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -793,7 +799,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3f821dac15a91164a84c1ecc6f21517d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -873,6 +879,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RevealableObject
   revealTime: 1
+  outlineOn: 0.25
+  outlineOff: 0
 --- !u!65 &960315062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -919,7 +927,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3f821dac15a91164a84c1ecc6f21517d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -999,6 +1007,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RevealableObject
   revealTime: 1
+  outlineOn: 0.25
+  outlineOff: 0
 --- !u!65 &1157346938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1045,7 +1055,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3f821dac15a91164a84c1ecc6f21517d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1187,6 +1197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RevealableObject
   revealTime: 1
+  outlineOn: 0.25
+  outlineOff: 0
 --- !u!65 &1506273839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1233,7 +1245,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3f821dac15a91164a84c1ecc6f21517d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1465,6 +1477,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RevealableObject
   revealTime: 1
+  outlineOn: 0.25
+  outlineOff: 0
 --- !u!65 &1558966556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1511,7 +1525,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3f821dac15a91164a84c1ecc6f21517d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1591,6 +1605,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RevealableObject
   revealTime: 1
+  outlineOn: 0.25
+  outlineOff: 0
 --- !u!65 &1614491723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1637,7 +1653,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3f821dac15a91164a84c1ecc6f21517d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1751,7 +1767,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3f821dac15a91164a84c1ecc6f21517d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1826,7 +1842,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.06666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 40de96f8de4a6d34881fb443be84dc3f, type: 2}
   m_BuildHeightMesh: 0
@@ -1863,6 +1879,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RevealableObject
   revealTime: 1
+  outlineOn: 0.25
+  outlineOff: 0
 --- !u!65 &2035071589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1909,7 +1927,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3f821dac15a91164a84c1ecc6f21517d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

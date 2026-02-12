@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class SoundPulse : MonoBehaviour
 {
+    private static readonly int ColorID = Shader.PropertyToID("_BaseColor");
     [SerializeField] private float maxRadius = 8f;
     [SerializeField] private float speed = 6f;
     [SerializeField] private Transform visual;
@@ -28,11 +29,13 @@ public class SoundPulse : MonoBehaviour
     {
         float t = col.radius / maxRadius;
 
-        Color c = mat.color;
+        if (mat.HasProperty(ColorID))
+        {
+            Color c = mat.GetColor(ColorID);
+            c.a = Mathf.Lerp(0.6f, 0f, t);
+            mat.SetColor(ColorID, c);
+        }
 
-        c.a = Mathf.Lerp(0.6f, 0f, t);
-
-        mat.color = c;
 
         // Aumenta o raio do colisor para criar o efeito de expansão
         col.radius += speed * Time.deltaTime;

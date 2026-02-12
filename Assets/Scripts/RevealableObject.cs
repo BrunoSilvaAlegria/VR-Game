@@ -1,29 +1,49 @@
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Renderer))]
 public class RevealableObject : MonoBehaviour
 {
+    [Header("Timing")]
     [SerializeField] private float revealTime = 1f;
 
-    private Renderer rend;
+    [Header("Outline Amount")]
+    [SerializeField] private float outlineOn = 0.15f;  // valor normal do teu shader
+    [SerializeField] private float outlineOff = 0f;     // 0 = sem outline
 
-    private void Start()
+    private Renderer rend;
+    private MaterialPropertyBlock mpb;
+    private Coroutine routine;
+
+    private static readonly int OutlineAmountID = Shader.PropertyToID("_OutlineAmount");
+
+    private void Awake()
     {
         rend = GetComponent<Renderer>();
-        rend.enabled = false; // Esconde o objeto inicialmente
+        mpb = new MaterialPropertyBlock();
+
+        // Começa sem outline (mas o renderer continua ativo)
+        SetOutline(outlineOff);
     }
 
     public void Reveal()
     {
-        StopAllCoroutines();
-        StartCoroutine(RevealCoroutine());
+        if (routine != null) StopCoroutine(routine);
+        routine = StartCoroutine(RevealRoutine());
     }
 
-    // Coroutine para revelar o objeto por um tempo determinado
-    public IEnumerator RevealCoroutine()
+    private IEnumerator RevealRoutine()
     {
-        rend.enabled = true; // Mostra o objeto
+        SetOutline(outlineOn);
         yield return new WaitForSeconds(revealTime);
-        rend.enabled = false; // Esconde o objeto novamente
+        SetOutline(outlineOff);
+        routine = null;
+    }
+
+    private void SetOutline(float amount)
+    {
+        rend.GetPropertyBlock(mpb);
+        mpb.SetFloat(OutlineAmountID, amount);
+        rend.SetPropertyBlock(mpb);
     }
 }

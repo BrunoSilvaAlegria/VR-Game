@@ -7,6 +7,7 @@ public class Heartbeat : MonoBehaviour
     [SerializeField] private float triggerDistance = 5f;
 
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private EndGame endGame;
 
     void Start()
     {
@@ -33,6 +34,11 @@ public class Heartbeat : MonoBehaviour
             {
                 audioSource.Stop();
             }
+        }
+
+        if(distance < 0.1f)
+        {
+            
         }
     }
 }

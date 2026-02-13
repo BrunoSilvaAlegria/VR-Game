@@ -1,9 +1,12 @@
 using System.Collections;
+using TreeEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SphereController : MonoBehaviour
 {
     [SerializeField] float timeToWait;
+    [SerializeField] Transform pocket;
     Coroutine waitTimeCoroutine;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,6 +42,11 @@ public class SphereController : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToWait);
         print("Spawn ball");
+    }
+
+    public void GoToPocket()
+    {
+        transform.position = pocket.position;
     }
     
 }

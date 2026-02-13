@@ -10,6 +10,8 @@ public class JumpScareSpawn : MonoBehaviour
     [SerializeField] private float timeFrom1to2 = 2f;
 
     [SerializeField] private float lifeTimeAfterSpawn = 2f;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioToPlay;
 
     private bool hasSpawned;
 
@@ -28,7 +30,7 @@ public class JumpScareSpawn : MonoBehaviour
 
             // Destroy after lifetime
             Destroy(spawnedObject, lifeTimeAfterSpawn);
-
+            audioSource.PlayOneShot(audioToPlay);
             if (walk)
             {
                 StartCoroutine(

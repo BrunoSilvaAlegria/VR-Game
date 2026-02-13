@@ -1,14 +1,47 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    // Referencia ao prefab do efeito sonoro de pulse
     [SerializeField] private GameObject soundPulsePrefab;
+    [SerializeField] private float collisionCooldown = 5f;
+
+    private Collider ballCollider;
+    private AudioSource audioSource;
+
+    // Keeps track of objects currently ignored
+    private Dictionary<Collider, Coroutine> ignoredColliders = new Dictionary<Collider, Coroutine>();
+
+    private void Awake()
+    {
+        ballCollider = GetComponent<Collider>();
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnCollisionEnter(Collision other)
     {
-        Instantiate(soundPulsePrefab, transform.position, Quaternion.identity);
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ignore Raycast"))
+            return;
 
-        SoundSystem.Emit(transform.position, 1f); // Emite um som com intensidade 1 na posição da colisão
+        Collider otherCol = other.collider;
+
+        // If already ignoring this collider, skip
+        if (ignoredColliders.ContainsKey(otherCol))
+            return;
+
+        Instantiate(soundPulsePrefab, transform.position, Quaternion.identity);
+        if(audioSource != null)
+            audioSource.Play();
+
+        Coroutine routine = StartCoroutine(ReenableCollision(otherCol));
+        ignoredColliders.Add(otherCol, routine);
+    }
+
+    private IEnumerator ReenableCollision(Collider otherCol)
+    {
+        yield return new WaitForSeconds(collisionCooldown);
+
+        ignoredColliders.Remove(otherCol);
     }
 }

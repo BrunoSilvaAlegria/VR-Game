@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Outline_Girl
+  m_Name: Outline_Item
   m_Shader: {fileID: 4800000, guid: 998a141f094fb154a985f154a15ccd50, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -38,11 +38,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _GrainRoughness: 0.5
-    - _OutlineAmount: 0.006
+    - _OutlineAmount: 0.002
     m_Colors:
     - _BaseColor: {r: 0.8113208, g: 0.18752226, b: 0.18752226, a: 1}
     - _DiffuseColor: {r: 0.12799996, g: 0.11974191, b: 0.11974191, a: 1}
-    - _OutlineColor: {r: 0.36765495, g: 0, b: 0.7075472, a: 1}
+    - _OutlineColor: {r: 1, g: 0, b: 0, a: 1}
     - _ShadowColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

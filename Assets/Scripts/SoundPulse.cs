@@ -1,51 +1,52 @@
+using System.Collections;
 using UnityEngine;
-
 
 public class SoundPulse : MonoBehaviour
 {
-    private static readonly int ColorID = Shader.PropertyToID("_BaseColor");
+    [Header("Tamanho do Collider")]
+    [SerializeField] private float minRadius = 0.1f;
     [SerializeField] private float maxRadius = 8f;
-    [SerializeField] private float speed = 6f;
-    [SerializeField] private Transform visual;
 
+    [Header("Tempo")]
+    [SerializeField] private float expansionDuration = 2f;
+    [SerializeField] private float revealDuration = 5f;
+
+    [Header("Visual Pulse")]
+    [SerializeField] private Transform visual;
     [SerializeField] private Renderer ringRenderer;
 
-    private Material mat;
+    [Header("Material Swap")]
+    [SerializeField] private Material baseMaterial;
+    [SerializeField] private Material materialToApply;
+    [SerializeField] private Material materialToApplyItem;
+    [SerializeField] private Material materialToApplyEnemy;
+    
 
     private SphereCollider col;
+    private float timer;
 
     private void Start()
     {
-        mat = ringRenderer.material;
-        // Inicializa o colisor com um raio pequeno
         col = GetComponent<SphereCollider>();
-        col.radius = 0.1f;
         col.isTrigger = true;
+        col.radius = minRadius;
 
         visual.localScale = Vector3.zero;
+        timer = 0f;
     }
 
     private void Update()
     {
-        float t = col.radius / maxRadius;
+        timer += Time.deltaTime;
 
-        if (mat.HasProperty(ColorID))
-        {
-            Color c = mat.GetColor(ColorID);
-            c.a = Mathf.Lerp(0.6f, 0f, t);
-            mat.SetColor(ColorID, c);
-        }
+        float t = timer / expansionDuration;
+        float currentRadius = Mathf.Lerp(minRadius, maxRadius, t);
+        col.radius = currentRadius;
 
-
-        // Aumenta o raio do colisor para criar o efeito de expansão
-        col.radius += speed * Time.deltaTime;
-
-        float diameter = col.radius * 2f;
-
+        float diameter = currentRadius * 2f;
         visual.localScale = new Vector3(diameter, diameter, 1f);
 
-        // Destroi o objeto quando o raio atingir o valor máximo
-        if (col.radius >= maxRadius)
+        if (timer >= revealDuration + 3f)
         {
             Destroy(gameObject);
         }
@@ -53,12 +54,41 @@ public class SoundPulse : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica se o objeto colidido possui o componente RevealableObject
-        RevealableObject reveal = other.GetComponent<RevealableObject>();
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ball") || other.gameObject.layer == LayerMask.NameToLayer("Girl")) return;
+
+        MeshRenderer reveal = other.GetComponent<MeshRenderer>();
+
         if (reveal != null)
         {
-            // Chama o método Reveal para revelar o objeto
-            reveal.Reveal();
+            // Remove todos os materiais e aplica só o materialToApply
+            if (other.gameObject.layer == LayerMask.NameToLayer("Items"))
+            {
+                reveal.materials = new Material[] { materialToApplyItem };
+            }
+            else if(other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            {
+                reveal.materials = new Material[] { materialToApplyEnemy };
+            }
+            else
+            {
+                 reveal.materials = new Material[] { materialToApply };
+            }
+            
+            if (other.gameObject.layer != LayerMask.NameToLayer("Items"))
+            {
+                StartCoroutine(RestoreMaterialAfterTime(reveal));
+            }
+
+        }
+    }
+
+    private IEnumerator RestoreMaterialAfterTime(MeshRenderer rendererToRestore)
+    {
+        yield return new WaitForSeconds(revealDuration);
+
+        if (rendererToRestore != null)
+        {
+            rendererToRestore.materials = new Material[] { baseMaterial };
         }
     }
 }

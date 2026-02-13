@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3718246783278326295}
   - component: {fileID: 4065600389333758872}
   - component: {fileID: 136495158181424174}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jumpscare Girl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1809922442808970250}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -3.0551, y: 4.427, z: -65.06342}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

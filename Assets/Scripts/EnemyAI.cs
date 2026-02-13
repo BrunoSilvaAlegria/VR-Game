@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] private float stopDistance = 1.2f;
+    [SerializeField] private Animator animator;
 
     [Header("Calm Patrol (optional waypoints)")]
     [SerializeField] private Transform[] patrolPoints;
@@ -85,7 +86,14 @@ public class EnemyAI : MonoBehaviour
     {
         // Suspicion decai sempre
         suspicion = Mathf.Clamp01(suspicion - suspicionDecayPerSec * Time.deltaTime);
-
+        if(agent.velocity.magnitude > 0)
+        {
+            animator.SetBool("walk", true);
+        }
+        else
+        {
+            animator.SetBool("walk",false);
+        }
         // Estados baseados em suspicion
         if (state == State.CalmPatrol && suspicion > 0.25f)
             state = State.SuspiciousRoam;

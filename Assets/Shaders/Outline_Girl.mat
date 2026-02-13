@@ -38,7 +38,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _GrainRoughness: 0.5
-    - _OutlineAmount: 0.006
+    - _OutlineAmount: 0.008
     m_Colors:
     - _BaseColor: {r: 0.8113208, g: 0.18752226, b: 0.18752226, a: 1}
     - _DiffuseColor: {r: 0.12799996, g: 0.11974191, b: 0.11974191, a: 1}

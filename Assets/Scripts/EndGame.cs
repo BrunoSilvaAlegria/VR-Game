@@ -19,17 +19,17 @@ public class EndGame : MonoBehaviour
 
         Time.timeScale = 0f;
 
-        End();
+        End(5f);
     }
-    public void End()
+    public void End(float time)
     {
-        StartCoroutine(EndRoutine());
+        StartCoroutine(EndRoutine(time));
     }
 
-    private IEnumerator EndRoutine()
+    private IEnumerator EndRoutine(float time)
     {
         // Wait 5 real seconds (ignores timeScale)
-        yield return new WaitForSecondsRealtime(5f);
+        yield return new WaitForSecondsRealtime(time);
 
         Time.timeScale = 1f; // restore time before loading
         SceneManager.LoadScene(0);

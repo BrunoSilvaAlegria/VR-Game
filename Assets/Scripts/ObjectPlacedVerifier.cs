@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ObjectPlacedVerifier : MonoBehaviour
 {
-    [SerializeField] private GameObject objectToSpawn;
+    [SerializeField] private EndGame endGame;
 
     private int objectsPlaced;
     private bool hasTriggered;
@@ -29,18 +29,8 @@ public class ObjectPlacedVerifier : MonoBehaviour
         {
             hasTriggered = true;
 
-            // Delete all children
-            for (int i = transform.childCount - 1; i >= 0; i--)
-            {
-                Destroy(transform.GetChild(i).gameObject);
-            }
+            endGame.End(1f);
 
-            // Spawn the object
-            Instantiate(
-                objectToSpawn,
-                transform.position,
-                transform.rotation
-            );
         }
     }
 }

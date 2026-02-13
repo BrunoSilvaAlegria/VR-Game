@@ -54,35 +54,38 @@ public class SoundPulse : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Ball") || other.gameObject.layer == LayerMask.NameToLayer("Girl")) return;
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ball") ||
+            other.gameObject.layer == LayerMask.NameToLayer("Girl"))
+            return;
 
-        MeshRenderer reveal = other.GetComponent<MeshRenderer>();
+        Renderer[] renderers = other.GetComponentsInChildren<Renderer>(true);
 
-        if (reveal != null)
+        if (renderers.Length == 0) return;
+
+        foreach (Renderer reveal in renderers)
         {
-            // Remove todos os materiais e aplica só o materialToApply
             if (other.gameObject.layer == LayerMask.NameToLayer("Items"))
             {
                 reveal.materials = new Material[] { materialToApplyItem };
             }
-            else if(other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            else if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
             {
                 reveal.materials = new Material[] { materialToApplyEnemy };
             }
             else
             {
-                 reveal.materials = new Material[] { materialToApply };
+                reveal.materials = new Material[] { materialToApply };
             }
-            
+
             if (other.gameObject.layer != LayerMask.NameToLayer("Items"))
             {
                 StartCoroutine(RestoreMaterialAfterTime(reveal));
             }
-
         }
     }
 
-    private IEnumerator RestoreMaterialAfterTime(MeshRenderer rendererToRestore)
+
+    private IEnumerator RestoreMaterialAfterTime(Renderer rendererToRestore)
     {
         yield return new WaitForSeconds(revealDuration);
 

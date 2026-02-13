@@ -4985,9 +4985,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundPulse
   minRadius: 0.1
-  maxRadius: 1
+  maxRadius: 1.5
   expansionDuration: 1.6
-  revealDuration: 4
+  revealDuration: 6.7
   visual: {fileID: 994366498716926620}
   ringRenderer: {fileID: 3615951194190998008}
   baseMaterial: {fileID: 2100000, guid: 19f03f06f2726d94a84244e90395e686, type: 2}

@@ -12,6 +12,7 @@ public class StartGame : MonoBehaviour
         {
             objectToActivate.SetActive(true);
             audioSource.Play();
+            Destroy(this);
         }
     }
 }

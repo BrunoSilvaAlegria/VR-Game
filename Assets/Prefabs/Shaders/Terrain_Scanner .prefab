@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4525522924089951915}
   - component: {fileID: 3615951194190998008}
   - component: {fileID: 6562657442268760028}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4928,7 +4928,7 @@ GameObject:
   - component: {fileID: 1810128931743948968}
   - component: {fileID: 4259314446135418669}
   - component: {fileID: 4208637130758722585}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 'Terrain_Scanner '
   m_TagString: Untagged
   m_Icon: {fileID: 0}

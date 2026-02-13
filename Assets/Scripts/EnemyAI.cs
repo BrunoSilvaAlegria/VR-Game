@@ -124,6 +124,8 @@ public class EnemyAI : MonoBehaviour
     // ---------------- HEARING ----------------
     private void OnSoundHeard(Vector3 soundPos, float intensity)
     {
+        Debug.Log($"Enemy heard event at {soundPos} intensity {intensity}");
+        
         if (Vector3.Distance(transform.position, soundPos) > hearingRange)
             return;
 

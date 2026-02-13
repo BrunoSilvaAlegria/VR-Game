@@ -1959,6 +1959,10 @@ PrefabInstance:
       value: RealEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 6655490966885421164, guid: a5f62bcc35247f94d972897b2c240feb, type: 3}
+      propertyPath: hearingRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655490966885421164, guid: a5f62bcc35247f94d972897b2c240feb, type: 3}
       propertyPath: 'patrolPoints.Array.data[0]'
       value: 
       objectReference: {fileID: 343157591}

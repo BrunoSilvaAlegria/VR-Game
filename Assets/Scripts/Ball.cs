@@ -31,6 +31,14 @@ public class Ball : MonoBehaviour
             return;
 
         Instantiate(soundPulsePrefab, transform.position, Quaternion.identity);
+
+        float impact = other.relativeVelocity.magnitude;
+        
+        float intensity = Mathf.InverseLerp(0f, 8f, impact);
+
+        SoundSystem.Emit(transform.position, intensity);
+
+
         if(audioSource != null)
             audioSource.Play();
 

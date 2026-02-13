@@ -2653,6 +2653,34 @@ PrefabInstance:
       propertyPath: pocket
       value: 
       objectReference: {fileID: 796520592}
+    - target: {fileID: 5491943193894808984, guid: c70b6c7d569fde9499c7d30d06ac3667, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5491943193894808984, guid: c70b6c7d569fde9499c7d30d06ac3667, type: 3}
+      propertyPath: leftTrigger.m_Reference
+      value: 
+      objectReference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 5491943193894808984, guid: c70b6c7d569fde9499c7d30d06ac3667, type: 3}
+      propertyPath: rightTrigger.m_Reference
+      value: 
+      objectReference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 5491943193894808984, guid: c70b6c7d569fde9499c7d30d06ac3667, type: 3}
+      propertyPath: leftTrigger.m_UseReference
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5491943193894808984, guid: c70b6c7d569fde9499c7d30d06ac3667, type: 3}
+      propertyPath: leftTrigger.m_Action.m_Name
+      value: Left Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5491943193894808984, guid: c70b6c7d569fde9499c7d30d06ac3667, type: 3}
+      propertyPath: rightTrigger.m_UseReference
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5491943193894808984, guid: c70b6c7d569fde9499c7d30d06ac3667, type: 3}
+      propertyPath: rightTrigger.m_Action.m_Name
+      value: Right Trigger
+      objectReference: {fileID: 0}
     - target: {fileID: 7493293921134307563, guid: c70b6c7d569fde9499c7d30d06ac3667, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.189

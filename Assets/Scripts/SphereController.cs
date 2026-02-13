@@ -1,10 +1,13 @@
 using System.Collections;
 using TreeEditor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class SphereController : MonoBehaviour
 {
+    [SerializeField] InputActionProperty leftTrigger;
+    [SerializeField] InputActionProperty rightTrigger;
     [SerializeField] float timeToWait;
     [SerializeField] Transform pocket;
     Coroutine waitTimeCoroutine;
@@ -17,7 +20,13 @@ public class SphereController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (
+        leftTrigger.action.ReadValue<float>() >= 0.5f ||
+        rightTrigger.action.ReadValue<float>() >= 0.5f
+        )
+        {
+            GoToPocket();
+        }
     }
 
     void OnCollisionExit(Collision collision)
@@ -44,7 +53,7 @@ public class SphereController : MonoBehaviour
         print("Spawn ball");
     }
 
-    public void GoToPocket()
+    void GoToPocket()
     {
         transform.position = pocket.position;
     }

@@ -55,7 +55,8 @@ public class SoundPulse : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Ball") ||
-            other.gameObject.layer == LayerMask.NameToLayer("Girl"))
+            other.gameObject.layer == LayerMask.NameToLayer("Girl") ||
+            other.gameObject.layer == LayerMask.NameToLayer("Ignore Raycast"))
             return;
 
         Renderer[] renderers = other.GetComponentsInChildren<Renderer>(true);

@@ -36,9 +36,9 @@ public class Heartbeat : MonoBehaviour
             }
         }
 
-        if(distance < 0.1f)
+        if(distance < 1f)
         {
-            
+            endGame.Die();
         }
     }
 }
